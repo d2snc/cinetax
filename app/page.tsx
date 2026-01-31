@@ -98,23 +98,23 @@ export default function Home() {
               <span>TaxTech para o Audiovisual</span>
             </div>
             <h1 className="hero-title">
-              Transforme seu Imposto de Renda em <span className="highlight">Investimento no Audiovisual</span>.
+              Reduza sua Carga Tributária em até <span className="highlight">40%</span> Investindo em Cultura
             </h1>
             <p className="hero-subtitle">
-              Com a CineTax, sua empresa investe em certificados CAV, impulsiona a cultura brasileira e abate até 100% do valor investido no IR devido. Rentabilidade e eficiência tributária em uma única plataforma.
+              Dedução operacional (IRPJ + CSLL) + Abatimento no IR + Retorno potencial. Com a CineTax, o custo real do seu investimento em CAV pode ser ZERO ou até negativo. Descubra o lucro escondido na sua declaração.
             </p>
             <div className="hero-stats">
               <div className="stat-item">
-                <div className="stat-value">100%</div>
-                <div className="stat-label">Abatimento no IR</div>
+                <div className="stat-value">Até 40%</div>
+                <div className="stat-label">Economia Tributária Total</div>
               </div>
               <div className="stat-item">
-                <div className="stat-value">R$2bi+</div>
-                <div className="stat-label">Mercado Anual</div>
+                <div className="stat-value">R$ 0</div>
+                <div className="stat-label">Custo Real Líquido</div>
               </div>
               <div className="stat-item">
-                <div className="stat-value">3%</div>
-                <div className="stat-label">do IR Devido</div>
+                <div className="stat-value">3X</div>
+                <div className="stat-label">Vantagens Fiscais</div>
               </div>
             </div>
           </div>
@@ -183,39 +183,150 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Value Proposition Section - Understand Real Value */}
+      <section className="value-proposition">
+        <div className="container">
+          <div className="section-header fade-in">
+            <span className="section-eyebrow">💰 O Lucro Escondido</span>
+            <h2 className="section-title">Entenda o Valor Real do Investimento em CAV</h2>
+            <p className="section-desc">
+              Não é apenas dedução de IR. É uma estratégia fiscal completa que transforma impostos em investimento rentável.
+            </p>
+          </div>
+
+          <div className="value-example">
+            <div className="example-header">
+              <h3>Exemplo Prático: Investimento de R$ 100.000</h3>
+              <p>Veja como funciona a tripla vantagem fiscal</p>
+            </div>
+
+            <div className="value-breakdown">
+              <div className="value-card fade-in-left">
+                <div className="value-card-number">1</div>
+                <h4 className="value-card-title">Dedução Operacional</h4>
+                <p className="value-card-desc">
+                  Reduz o lucro tributável em <strong>R$ 100.000</strong>
+                </p>
+                <div className="value-calculation">
+                  <div className="calc-item">
+                    <span className="calc-label">Economia IRPJ (15%)</span>
+                    <span className="calc-value">R$ 15.000</span>
+                  </div>
+                  <div className="calc-item">
+                    <span className="calc-label">Economia CSLL (9%)</span>
+                    <span className="calc-value">R$ 9.000</span>
+                  </div>
+                  <div className="calc-item">
+                    <span className="calc-label">IRPJ Adicional (10%)*</span>
+                    <span className="calc-value">~R$ 10.000</span>
+                  </div>
+                  <div className="calc-total">
+                    <span className="calc-label">Subtotal</span>
+                    <span className="calc-value gold">R$ 34.000</span>
+                  </div>
+                </div>
+                <p className="value-footnote">*Sobre lucro superior a R$ 240k/ano</p>
+              </div>
+
+              <div className="value-card fade-in">
+                <div className="value-card-number">2</div>
+                <h4 className="value-card-title">Abatimento Direto no IR</h4>
+                <p className="value-card-desc">
+                  100% dedutível do Imposto de Renda devido
+                </p>
+                <div className="value-calculation">
+                  <div className="calc-item">
+                    <span className="calc-label">Abatimento IR</span>
+                    <span className="calc-value">R$ 100.000</span>
+                  </div>
+                  <div className="calc-item highlight">
+                    <span className="calc-label">Limite máximo</span>
+                    <span className="calc-value">3% do IR devido</span>
+                  </div>
+                </div>
+                <p className="value-benefit">✓ Valor que seria pago ao governo vai para cultura</p>
+              </div>
+
+              <div className="value-card fade-in-right">
+                <div className="value-card-number">3</div>
+                <h4 className="value-card-title">Retorno Potencial</h4>
+                <p className="value-card-desc">
+                  Participação nos lucros comerciais da obra
+                </p>
+                <div className="value-calculation">
+                  <div className="calc-item">
+                    <span className="calc-label">Bilheteria</span>
+                    <span className="calc-value">Variável</span>
+                  </div>
+                  <div className="calc-item">
+                    <span className="calc-label">Streaming</span>
+                    <span className="calc-value">Variável</span>
+                  </div>
+                  <div className="calc-item">
+                    <span className="calc-label">Vendas internacionais</span>
+                    <span className="calc-value">Variável</span>
+                  </div>
+                </div>
+                <p className="value-benefit">✓ ROI adicional potencial</p>
+              </div>
+            </div>
+
+            <div className="value-result">
+              <div className="result-box">
+                <div className="result-label">Custo Real Líquido</div>
+                <div className="result-value">R$ 66.000 a R$ 0</div>
+                <p className="result-desc">
+                  Após dedução operacional de ~R$ 34k, o investimento de R$ 100k passa a custar R$ 66k. Com o abatimento do IR, esse valor pode chegar a <strong>ZERO ou até ser NEGATIVO</strong> com o retorno potencial da obra.
+                </p>
+              </div>
+              <div className="result-highlight">
+                <span className="highlight-icon">💡</span>
+                <p>
+                  <strong>Resultado:</strong> Você investe em cultura, ganha visibilidade ESG, e pode ter custo zero ou até lucro.
+                  Esse é o lucro escondido que poucos conhecem.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Benefits Section */}
       <section className="benefits">
         <div className="container">
           <div className="section-header fade-in">
-            <span className="section-eyebrow">🎬 Benefícios</span>
+            <span className="section-eyebrow">🎯 Vantagens Competitivas</span>
             <h2 className="section-title">Por que investir em CAV com a CineTax?</h2>
             <p className="section-desc">
-              Combine eficiência tributária, rentabilidade e impacto social positivo em uma única estratégia.
+              Não é apenas sobre pagar menos impostos. É sobre transformar obrigações fiscais em oportunidades de negócio.
             </p>
           </div>
 
           <div className="benefits-grid">
             <div className="benefit-card fade-in delay-1">
-              <div className="benefit-icon">💰</div>
-              <h3 className="benefit-title">Abatimento Fiscal</h3>
+              <div className="benefit-icon">🎯</div>
+              <h3 className="benefit-title">Tripla Vantagem Fiscal</h3>
               <p className="benefit-desc">
-                Reduza sua carga tributária de forma 100% legal via Lei do Audiovisual. Abata até 3% do IR devido da sua empresa optante pelo Lucro Real.
+                Dedução operacional (IRPJ + CSLL) + Abatimento direto no IR + Retorno potencial.
+                Economia combinada de até 40% da carga tributária total. É a única modalidade de investimento que oferece benefícios fiscais triplos.
               </p>
             </div>
 
             <div className="benefit-card fade-in delay-2">
-              <div className="benefit-icon">📈</div>
-              <h3 className="benefit-title">Rentabilidade</h3>
+              <div className="benefit-icon">💸</div>
+              <h3 className="benefit-title">Custo Real Zero</h3>
               <p className="benefit-desc">
-                Além do desconto fiscal, participe dos resultados comerciais das obras audiovisuais e obtenha retorno sobre seu investimento.
+                Com a dedução operacional reduzindo o custo inicial e o abatimento do IR recuperando o investimento, o desembolso líquido pode ser ZERO.
+                Adicione o potencial de retorno da obra e você pode até ter lucro.
               </p>
             </div>
 
             <div className="benefit-card fade-in delay-3">
-              <div className="benefit-icon">🌱</div>
-              <h3 className="benefit-title">ESG e Branding</h3>
+              <div className="benefit-icon">🚀</div>
+              <h3 className="benefit-title">ROI + ESG + Branding</h3>
               <p className="benefit-desc">
-                Associe sua marca ao fomento da cultura brasileira, gere impacto social positivo e fortaleça sua imagem corporativa com propósito.
+                Além dos benefícios fiscais, você ganha participação nos lucros da obra, fortalece sua imagem ESG investindo em cultura,
+                e pode ter seu logo aparecendo nos créditos. Múltiplos ganhos em uma única estratégia.
               </p>
             </div>
           </div>
@@ -313,6 +424,20 @@ export default function Home() {
           <div className="faq-list">
             <div className={`faq-item ${activeFaq === 0 ? 'active' : ''}`}>
               <button className="faq-question" onClick={() => setActiveFaq(activeFaq === 0 ? null : 0)}>
+                <span>Qual é o custo real do investimento em CAV?</span>
+                <span className="faq-icon">+</span>
+              </button>
+              <div className="faq-answer">
+                <div>
+                  <p>
+                    <strong>O custo real pode ser ZERO ou até negativo.</strong> Veja como: ao investir R$ 100k em CAV, você primeiro deduz como despesa operacional, economizando ~R$ 34k em IRPJ e CSLL. Seu custo passa para R$ 66k. Depois, você abate 100% do valor (R$ 100k) do seu IR devido. Com esses dois benefícios combinados, o desembolso líquido pode chegar a zero. Adicionalmente, você ainda pode ter retorno financeiro com a participação nos lucros da obra audiovisual. É por isso que chamamos de "lucro escondido" — muitas empresas pagam impostos sem saber que poderiam reinvestir esse valor de forma inteligente.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className={`faq-item ${activeFaq === 1 ? 'active' : ''}`}>
+              <button className="faq-question" onClick={() => setActiveFaq(activeFaq === 1 ? null : 1)}>
                 <span>O que é CAV (Certificado de Investimento Audiovisual)?</span>
                 <span className="faq-icon">+</span>
               </button>
@@ -339,8 +464,8 @@ export default function Home() {
               </div>
             </div>
 
-            <div className={`faq-item ${activeFaq === 2 ? 'active' : ''}`}>
-              <button className="faq-question" onClick={() => setActiveFaq(activeFaq === 2 ? null : 2)}>
+            <div className={`faq-item ${activeFaq === 3 ? 'active' : ''}`}>
+              <button className="faq-question" onClick={() => setActiveFaq(activeFaq === 3 ? null : 3)}>
                 <span>Como funciona o abatimento fiscal?</span>
                 <span className="faq-icon">+</span>
               </button>
@@ -367,8 +492,8 @@ export default function Home() {
               </div>
             </div>
 
-            <div className={`faq-item ${activeFaq === 4 ? 'active' : ''}`}>
-              <button className="faq-question" onClick={() => setActiveFaq(activeFaq === 4 ? null : 4)}>
+            <div className={`faq-item ${activeFaq === 5 ? 'active' : ''}`}>
+              <button className="faq-question" onClick={() => setActiveFaq(activeFaq === 5 ? null : 5)}>
                 <span>Qual o papel da CineTax nesse processo?</span>
                 <span className="faq-icon">+</span>
               </button>

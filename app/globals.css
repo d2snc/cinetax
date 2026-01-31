@@ -482,6 +482,218 @@ h4 {
   font-weight: 500;
 }
 
+/* ===== VALUE PROPOSITION SECTION ===== */
+.value-proposition {
+  padding: var(--section-padding);
+  background: var(--white);
+  position: relative;
+}
+
+.value-example {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.example-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.example-header h3 {
+  font-size: 1.75rem;
+  color: var(--navy-800);
+  margin-bottom: 8px;
+}
+
+.example-header p {
+  font-size: 1.125rem;
+  color: var(--gray-600);
+}
+
+.value-breakdown {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-bottom: 48px;
+}
+
+.value-card {
+  background: var(--gray-50);
+  border-radius: var(--radius-xl);
+  padding: 32px 24px;
+  border: 2px solid var(--gray-200);
+  transition: var(--transition-normal);
+  position: relative;
+}
+
+.value-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--gold-400);
+  box-shadow: var(--shadow-xl);
+}
+
+.value-card-number {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, var(--navy-800), var(--navy-700));
+  color: var(--gold-400);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.value-card-title {
+  font-size: 1.25rem;
+  color: var(--navy-800);
+  margin-bottom: 12px;
+}
+
+.value-card-desc {
+  font-size: 0.95rem;
+  color: var(--gray-600);
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.value-calculation {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.calc-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.calc-item:last-child {
+  border-bottom: none;
+}
+
+.calc-item.highlight {
+  background: rgba(212, 162, 26, 0.1);
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  margin-top: 8px;
+  border-bottom: none;
+}
+
+.calc-label {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+}
+
+.calc-value {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--navy-800);
+}
+
+.calc-value.gold {
+  color: var(--gold-500);
+  font-size: 1.125rem;
+}
+
+.calc-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0 0;
+  margin-top: 8px;
+  border-top: 2px solid var(--gold-400);
+}
+
+.calc-total .calc-label {
+  font-weight: 600;
+  color: var(--navy-800);
+}
+
+.value-footnote {
+  font-size: 0.75rem;
+  color: var(--gray-500);
+  font-style: italic;
+  margin-top: 8px;
+}
+
+.value-benefit {
+  font-size: 0.875rem;
+  color: var(--gold-600);
+  font-weight: 500;
+  margin-top: 16px;
+}
+
+.value-result {
+  background: linear-gradient(135deg, var(--navy-900), var(--navy-800));
+  border-radius: var(--radius-2xl);
+  padding: 48px;
+  color: var(--white);
+}
+
+.result-box {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.result-label {
+  font-size: 1rem;
+  color: var(--gray-400);
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.result-value {
+  font-size: 3.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--gold-400), var(--gold-300));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 16px;
+}
+
+.result-desc {
+  font-size: 1.125rem;
+  color: var(--gray-300);
+  line-height: 1.7;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.result-highlight {
+  background: rgba(212, 162, 26, 0.1);
+  border: 1px solid rgba(212, 162, 26, 0.3);
+  border-radius: var(--radius-lg);
+  padding: 24px 32px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.highlight-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.result-highlight p {
+  font-size: 1rem;
+  color: var(--gray-200);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.result-highlight strong {
+  color: var(--gold-300);
+}
+
 /* ===== BENEFITS SECTION ===== */
 .benefits {
   padding: var(--section-padding);
