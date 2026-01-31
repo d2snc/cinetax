@@ -311,63 +311,73 @@ export default function Home() {
           </div>
 
           <div className="faq-list">
-            <div className={`faq-item fade-in ${activeFaq === 0 ? 'active' : ''}`}>
+            <div className={`faq-item ${activeFaq === 0 ? 'active' : ''}`}>
               <button className="faq-question" onClick={() => setActiveFaq(activeFaq === 0 ? null : 0)}>
                 <span>O que é CAV (Certificado de Investimento Audiovisual)?</span>
                 <span className="faq-icon">+</span>
               </button>
               <div className="faq-answer">
-                <p>
-                  O CAV é um título emitido por empresas produtoras de obras audiovisuais brasileiras, que permite às empresas investidoras receber participação nos resultados comerciais da obra. O investimento em CAV pode ser deduzido do Imposto de Renda devido por empresas tributadas pelo Lucro Real, até o limite de 3% do imposto devido, conforme estabelecido pela Lei do Audiovisual (Lei nº 8.685/93).
-                </p>
+                <div>
+                  <p>
+                    O CAV é um título emitido por empresas produtoras de obras audiovisuais brasileiras, que permite às empresas investidoras receber participação nos resultados comerciais da obra. O investimento em CAV pode ser deduzido do Imposto de Renda devido por empresas tributadas pelo Lucro Real, até o limite de 3% do imposto devido, conforme estabelecido pela Lei do Audiovisual (Lei nº 8.685/93).
+                  </p>
+                </div>
               </div>
             </div>
 
-            <div className={`faq-item fade-in delay-1 ${activeFaq === 1 ? 'active' : ''}`}>
+            <div className={`faq-item ${activeFaq === 1 ? 'active' : ''}`}>
               <button className="faq-question" onClick={() => setActiveFaq(activeFaq === 1 ? null : 1)}>
                 <span>Quem pode investir em CAV?</span>
                 <span className="faq-icon">+</span>
               </button>
               <div className="faq-answer">
-                <p>
-                  Podem investir em CAV empresas tributadas pelo regime de Lucro Real que possuam Imposto de Renda devido. O investimento é limitado a 3% do imposto de renda devido, antes de qualquer incentivo fiscal. É uma excelente opção para empresas que buscam otimizar sua carga tributária enquanto apoiam a cultura brasileira.
-                </p>
+                <div>
+                  <p>
+                    Podem investir em CAV empresas tributadas pelo regime de Lucro Real que possuam Imposto de Renda devido. O investimento é limitado a 3% do imposto de renda devido, antes de qualquer incentivo fiscal. É uma excelente opção para empresas que buscam otimizar sua carga tributária enquanto apoiam a cultura brasileira.
+                  </p>
+                </div>
               </div>
             </div>
 
-            <div className={`faq-item fade-in delay-2 ${activeFaq === 2 ? 'active' : ''}`}>
+            <div className={`faq-item ${activeFaq === 2 ? 'active' : ''}`}>
               <button className="faq-question" onClick={() => setActiveFaq(activeFaq === 2 ? null : 2)}>
                 <span>Como funciona o abatimento fiscal?</span>
                 <span className="faq-icon">+</span>
               </button>
               <div className="faq-answer">
-                <p>
-                  Ao investir em CAV, sua empresa pode deduzir 100% do valor investido diretamente do Imposto de Renda devido, respeitando o limite de 3% do IR antes de outros incentivos. Ou seja, o valor investido não representa um custo adicional para a empresa — é uma realocação do imposto que seria pago ao governo para o fomento do audiovisual brasileiro.
-                </p>
+                <div>
+                  <p>
+                    Ao investir em CAV, sua empresa pode deduzir 100% do valor investido diretamente do Imposto de Renda devido, respeitando o limite de 3% do IR antes de outros incentivos. Ou seja, o valor investido não representa um custo adicional para a empresa — é uma realocação do imposto que seria pago ao governo para o fomento do audiovisual brasileiro.
+                  </p>
+                </div>
               </div>
             </div>
 
-            <div className={`faq-item fade-in delay-3 ${activeFaq === 3 ? 'active' : ''}`}>
+            <div className={`faq-item ${activeFaq === 3 ? 'active' : ''}`}>
               <button className="faq-question" onClick={() => setActiveFaq(activeFaq === 3 ? null : 3)}>
                 <span>É possível ter retorno financeiro além do benefício fiscal?</span>
                 <span className="faq-icon">+</span>
               </button>
               <div className="faq-answer">
-                <p>
-                  Sim! Ao adquirir um CAV, a empresa investidora também passa a ter direito a uma participação nos resultados comerciais da obra audiovisual. Isso significa que, além do benefício fiscal imediato, há potencial de retorno financeiro caso a obra tenha sucesso comercial em bilheteria, streaming, vendas internacionais e outros canais de distribuição.
-                </p>
+                <div>
+                  <p>
+                    Sim! Ao adquirir um CAV, a empresa investidora também passa a ter direito a uma participação nos resultados comerciais da obra audiovisual. Isso significa que, além do benefício fiscal imediato, há potencial de retorno financeiro caso a obra tenha sucesso comercial em bilheteria, streaming, vendas internacionais e outros canais de distribuição.
+                  </p>
+                </div>
               </div>
             </div>
 
-            <div className={`faq-item fade-in delay-4 ${activeFaq === 4 ? 'active' : ''}`}>
+            <div className={`faq-item ${activeFaq === 4 ? 'active' : ''}`}>
               <button className="faq-question" onClick={() => setActiveFaq(activeFaq === 4 ? null : 4)}>
                 <span>Qual o papel da CineTax nesse processo?</span>
                 <span className="faq-icon">+</span>
               </button>
               <div className="faq-answer">
-                <p>
-                  A CineTax é uma plataforma tecnológica que conecta empresas investidoras a projetos audiovisuais aprovados pela Ancine. Nós simplificamos todo o processo: desde a seleção de projetos até a emissão dos certificados, passando pela análise de conformidade e acompanhamento do investimento. Nossa missão é tornar o investimento em cultura acessível, seguro e rentável.
-                </p>
+                <div>
+                  <p>
+                    A CineTax é uma plataforma tecnológica que conecta empresas investidoras a projetos audiovisuais aprovados pela Ancine. Nós simplificamos todo o processo: desde a seleção de projetos até a emissão dos certificados, passando pela análise de conformidade e acompanhamento do investimento. Nossa missão é tornar o investimento em cultura acessível, seguro e rentável.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
