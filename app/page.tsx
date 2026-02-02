@@ -72,17 +72,20 @@ export default function Home() {
       {/* Navbar */}
       <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
         <div className="container">
-          <Image
-            src="/logo.png"
-            alt="CineTax"
-            width={200}
-            height={75}
-            className="navbar-logo"
-            priority
-            quality={100}
-            unoptimized
-            style={{ objectFit: 'contain' }}
-          />
+          <div className="navbar-brand">
+            <Image
+              src="/logo.png"
+              alt="CineTax"
+              width={200}
+              height={75}
+              className="navbar-logo"
+              priority
+              quality={100}
+              unoptimized
+              style={{ objectFit: 'contain' }}
+            />
+            <span className="navbar-slogan">Seu imposto em cena.</span>
+          </div>
           <a href="#hero-form" className="btn-cta">
             Falar com Especialista
           </a>
@@ -97,20 +100,21 @@ export default function Home() {
             <div className="hero-badge">
               <span>TaxTech para o Audiovisual</span>
             </div>
+            <p className="hero-cav-intro">Você conhece o Certificado de Investimento Audiovisual (CAV)?</p>
             <h1 className="hero-title">
-              Reduza sua Carga Tributária em até <span className="highlight">40%</span> Investindo em Cultura
+              Reduza sua carga tributária investindo em produções audiovisuais
             </h1>
             <p className="hero-subtitle">
-              Dedução operacional (IRPJ + CSLL) + Abatimento no IR + Retorno potencial. Com a CineTax, o custo real do seu investimento em CAV pode ser ZERO ou até negativo. Descubra o lucro escondido na sua declaração.
+              Abatimento como despesa operacional + Dedução total do IRPJ + Retorno potencial. Com a CineTax, você ganha para investir. Descubra o lucro escondido na sua declaração.
             </p>
             <div className="hero-stats">
               <div className="stat-item">
-                <div className="stat-value">Até 40%</div>
-                <div className="stat-label">Economia Tributária Total</div>
+                <div className="stat-value">100%</div>
+                <div className="stat-label">Abatimento como Despesa Operacional</div>
               </div>
               <div className="stat-item">
-                <div className="stat-value">R$ 0</div>
-                <div className="stat-label">Custo Real Líquido</div>
+                <div className="stat-value">100%</div>
+                <div className="stat-label">Dedução do IRPJ</div>
               </div>
               <div className="stat-item">
                 <div className="stat-value">3X</div>
@@ -120,13 +124,13 @@ export default function Home() {
           </div>
 
           <div className="hero-form-wrapper" id="hero-form">
-            <h3 className="hero-form-title">Solicite Acesso Antecipado</h3>
+            <h3 className="hero-form-title">Solicite acesso antecipado</h3>
             <p className="hero-form-desc">
               Seja um dos primeiros a utilizar nossa plataforma e otimizar sua estratégia fiscal.
             </p>
             <form className="hero-form" onSubmit={handleFormSubmit}>
               <div className="form-group">
-                <label htmlFor="name">Nome Completo</label>
+                <label htmlFor="name">Nome completo</label>
                 <input
                   type="text"
                   id="name"
@@ -136,7 +140,7 @@ export default function Home() {
                 />
               </div>
               <div className="form-group">
-                <label htmlFor="email">E-mail Corporativo</label>
+                <label htmlFor="email">E-mail corporativo</label>
                 <input
                   type="email"
                   id="email"
@@ -155,11 +159,35 @@ export default function Home() {
                   required
                 />
               </div>
-              <button type="submit" className="btn-submit" disabled={formStatus === 'loading'}>
-                {formStatus === 'loading' ? 'Enviando...' :
-                  formStatus === 'success' ? '✓ Enviado com sucesso!' :
-                    'Quero Acesso Antecipado'}
-              </button>
+              <div className="form-group">
+                <label htmlFor="comments">Comentários ou observações (opcional)</label>
+                <textarea
+                  id="comments"
+                  name="comments"
+                  placeholder="Conte-nos um pouco sobre seu interesse ou tire suas dúvidas"
+                  rows={4}
+                />
+              </div>
+
+              <div className="form-actions">
+                <button type="submit" className="btn-submit" disabled={formStatus === 'loading'}>
+                  {formStatus === 'loading' ? 'Enviando...' :
+                    formStatus === 'success' ? '✓ Enviado com sucesso!' :
+                      'Quero Acesso Antecipado'}
+                </button>
+
+                <a
+                  href="https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20investimento%20em%20CAV"
+                  className="btn-whatsapp"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+                  </svg>
+                  WhatsApp
+                </a>
+              </div>
 
               {formStatus === 'success' && (
                 <p className="form-success">
@@ -190,39 +218,35 @@ export default function Home() {
             <span className="section-eyebrow">💰 O Lucro Escondido</span>
             <h2 className="section-title">Entenda o Valor Real do Investimento em CAV</h2>
             <p className="section-desc">
-              Não é apenas dedução de IR. É uma estratégia fiscal completa que transforma impostos em investimento rentável.
+              Muito além da dedução do IRPJ: esta estratégia fiscal completa transforma seus impostos em investimento rentável.
             </p>
           </div>
 
           <div className="value-example">
             <div className="example-header">
-              <h3>Exemplo Prático: Investimento de R$ 100.000</h3>
+              <h3>Exemplo prático: Investimento de R$ 100.000</h3>
               <p>Veja como funciona a tripla vantagem fiscal</p>
             </div>
 
             <div className="value-breakdown">
               <div className="value-card fade-in-left">
                 <div className="value-card-number">1</div>
-                <h4 className="value-card-title">Dedução Operacional</h4>
+                <h4 className="value-card-title">Abatimento como Despesa Operacional</h4>
                 <p className="value-card-desc">
-                  Reduz o lucro tributável em <strong>R$ 100.000</strong>
+                  Reduz o lucro real em <strong>R$ 100.000,00</strong>
                 </p>
                 <div className="value-calculation">
                   <div className="calc-item">
                     <span className="calc-label">Economia IRPJ (15%)</span>
-                    <span className="calc-value">R$ 15.000</span>
-                  </div>
-                  <div className="calc-item">
-                    <span className="calc-label">Economia CSLL (9%)</span>
-                    <span className="calc-value">R$ 9.000</span>
+                    <span className="calc-value">R$ 15.000,00</span>
                   </div>
                   <div className="calc-item">
                     <span className="calc-label">IRPJ Adicional (10%)*</span>
-                    <span className="calc-value">~R$ 10.000</span>
+                    <span className="calc-value">R$ 10.000,00</span>
                   </div>
                   <div className="calc-total">
                     <span className="calc-label">Subtotal</span>
-                    <span className="calc-value gold">R$ 34.000</span>
+                    <span className="calc-value gold">R$ 25.000,00</span>
                   </div>
                 </div>
                 <p className="value-footnote">*Sobre lucro superior a R$ 240k/ano</p>
@@ -230,21 +254,21 @@ export default function Home() {
 
               <div className="value-card fade-in">
                 <div className="value-card-number">2</div>
-                <h4 className="value-card-title">Abatimento Direto no IR</h4>
+                <h4 className="value-card-title">Dedução total do IRPJ</h4>
                 <p className="value-card-desc">
                   100% dedutível do Imposto de Renda devido
                 </p>
                 <div className="value-calculation">
                   <div className="calc-item">
-                    <span className="calc-label">Abatimento IR</span>
-                    <span className="calc-value">R$ 100.000</span>
+                    <span className="calc-label">Dedução IR</span>
+                    <span className="calc-value">R$ 100.000,00</span>
                   </div>
                   <div className="calc-item highlight">
                     <span className="calc-label">Limite máximo</span>
                     <span className="calc-value">3% do IR devido</span>
                   </div>
                 </div>
-                <p className="value-benefit">✓ Valor que seria pago ao governo vai para cultura</p>
+                <p className="value-benefit">✓ Valor que seria pago ao governo vai para a atividade audiovisual</p>
               </div>
 
               <div className="value-card fade-in-right">
@@ -273,17 +297,17 @@ export default function Home() {
 
             <div className="value-result">
               <div className="result-box">
-                <div className="result-label">Custo Real Líquido</div>
-                <div className="result-value">R$ 66.000 a R$ 0</div>
+                <div className="result-label">Lucro Escondido</div>
+                <div className="result-value">R$ 25.000,00</div>
                 <p className="result-desc">
-                  Após dedução operacional de ~R$ 34k, o investimento de R$ 100k passa a custar R$ 66k. Com o abatimento do IR, esse valor pode chegar a <strong>ZERO ou até ser NEGATIVO</strong> com o retorno potencial da obra.
+                  Após o abatimento como despesa operacional e a dedução total do imposto devido, você não só recupera 100% do investimento, mas também deixa de pagar 25% de IRPJ sobre o valor investido.
+                  <br /><strong>Dessa forma, a empresa tem seu lucro garantido.</strong>
                 </p>
               </div>
               <div className="result-highlight">
                 <span className="highlight-icon">💡</span>
                 <p>
-                  <strong>Resultado:</strong> Você investe em cultura, ganha visibilidade ESG, e pode ter custo zero ou até lucro.
-                  Esse é o lucro escondido que poucos conhecem.
+                  <strong>Resultado:</strong> Você investe na produção audiovisual, ganha visibilidade ESG e ainda deixa de pagar uma parte do imposto. Esse é o lucro escondido que poucos conhecem.
                 </p>
               </div>
             </div>
@@ -298,26 +322,24 @@ export default function Home() {
             <span className="section-eyebrow">🎯 Vantagens Competitivas</span>
             <h2 className="section-title">Por que investir em CAV com a CineTax?</h2>
             <p className="section-desc">
-              Não é apenas sobre pagar menos impostos. É sobre transformar obrigações fiscais em oportunidades de negócio.
+              Esta abordagem transforma obrigações fiscais em verdadeiras oportunidades de negócio, indo muito além da simples economia de impostos.
             </p>
           </div>
 
           <div className="benefits-grid">
             <div className="benefit-card fade-in delay-1">
               <div className="benefit-icon">🎯</div>
-              <h3 className="benefit-title">Tripla Vantagem Fiscal</h3>
+              <h3 className="benefit-title">Tripla vantagem fiscal</h3>
               <p className="benefit-desc">
-                Dedução operacional (IRPJ + CSLL) + Abatimento direto no IR + Retorno potencial.
-                Economia combinada de até 40% da carga tributária total. É a única modalidade de investimento que oferece benefícios fiscais triplos.
+                Abatimento como despesa operacional + Dedução total do IRPJ + Retorno potencial. Economia gerada de 0,45% da carga tributária total. É a única modalidade de investimento que oferece todas essas vantagens.
               </p>
             </div>
 
             <div className="benefit-card fade-in delay-2">
               <div className="benefit-icon">💸</div>
-              <h3 className="benefit-title">Custo Real Zero</h3>
+              <h3 className="benefit-title">Lucro Escondido</h3>
               <p className="benefit-desc">
-                Com a dedução operacional reduzindo o custo inicial e o abatimento do IR recuperando o investimento, o desembolso líquido pode ser ZERO.
-                Adicione o potencial de retorno da obra e você pode até ter lucro.
+                Utilizando a tripla vantagem, você não só recupera todo o seu investimento, mas também garante lucro para sua empresa. Seus ganhos ainda podem se multiplicar com o potencial de retorno da obra audiovisual.
               </p>
             </div>
 
@@ -325,10 +347,31 @@ export default function Home() {
               <div className="benefit-icon">🚀</div>
               <h3 className="benefit-title">ROI + ESG + Branding</h3>
               <p className="benefit-desc">
-                Além dos benefícios fiscais, você ganha participação nos lucros da obra, fortalece sua imagem ESG investindo em cultura,
-                e pode ter seu logo aparecendo nos créditos. Múltiplos ganhos em uma única estratégia.
+                Além dos benefícios fiscais, você ganha participação nos lucros da obra, fortalecendo sua ESG investindo em produções audiovisuais. Múltiplos ganhos em uma única estratégia.
               </p>
             </div>
+          </div>
+
+          <div className="benefits-cta fade-in">
+            <a href="#hero-form" className="btn-cta">
+              Quero investir agora
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Competitor Alert Section */}
+      <section className="competitor-alert">
+        <div className="container">
+          <div className="competitor-alert-content fade-in">
+            <div className="alert-icon">⚠️</div>
+            <h2 className="alert-title">Você sabia que seu concorrente já investiu e largou na sua frente?</h2>
+            <p className="alert-text">
+              Entre em contato conosco para conferir as empresas que já utilizaram esse benefício fiscal.
+            </p>
+            <a href="#hero-form" className="btn-alert">
+              Quero saber mais
+            </a>
           </div>
         </div>
       </section>
@@ -338,7 +381,7 @@ export default function Home() {
         <div className="container">
           <div className="section-header fade-in">
             <span className="section-eyebrow">🚀 Processo Simples</span>
-            <h2 className="section-title">Como Funciona</h2>
+            <h2 className="section-title">Como funciona</h2>
             <p className="section-desc">
               Em apenas três passos, sua empresa já estará investindo no audiovisual brasileiro.
             </p>
@@ -348,7 +391,7 @@ export default function Home() {
             <div className="timeline-step fade-in-left">
               <div className="step-number"><span>1</span></div>
               <div className="step-content">
-                <h4 className="step-title">Escolha o Projeto</h4>
+                <h4 className="step-title">Escolha o projeto</h4>
                 <p className="step-desc">
                   Navegue por projetos audiovisuais aprovados pela Ancine e selecione aqueles que mais se alinham com sua estratégia.
                 </p>
@@ -358,7 +401,7 @@ export default function Home() {
             <div className="timeline-step fade-in">
               <div className="step-number"><span>2</span></div>
               <div className="step-content">
-                <h4 className="step-title">Realize o Aporte</h4>
+                <h4 className="step-title">Realize o aporte</h4>
                 <p className="step-desc">
                   Invista diretamente pela nossa plataforma digital, com total segurança e transparência em todo o processo.
                 </p>
@@ -368,9 +411,9 @@ export default function Home() {
             <div className="timeline-step fade-in-right">
               <div className="step-number"><span>3</span></div>
               <div className="step-content">
-                <h4 className="step-title">Receba o Certificado</h4>
+                <h4 className="step-title">Receba o certificado</h4>
                 <p className="step-desc">
-                  Obtenha o CAV - Certificado de Investimento Audiovisual para abatimento direto no cálculo do seu IR.
+                  Obtenha o Certificado de Investimento Audiovisual (CAV) e já está pronto para aproveitar todos os benefícios fiscais.
                 </p>
               </div>
             </div>
@@ -383,9 +426,9 @@ export default function Home() {
         <div className="container">
           <div className="trust-content fade-in">
             <div className="trust-icon">🛡️</div>
-            <h2 className="trust-title">Segurança Jurídica e Conformidade Total</h2>
+            <h2 className="trust-title">Segurança jurídica e conformidade total</h2>
             <p className="trust-text">
-              A CineTax opera em total conformidade com a legislação brasileira, incluindo a Lei do Audiovisual (Lei nº 8.685/93), normativas da <strong>CVM (Comissão de Valores Mobiliários)</strong> e regulamentação da <strong>ANCINE (Agência Nacional do Cinema)</strong>.
+              A CineTax opera em total conformidade com a legislação brasileira, incluindo a Lei do Audiovisual (Lei nº 8.685/93), normativas da <strong>Comissão de Valores Mobiliários (CVM)</strong> e regulamentação da <strong>Agência Nacional do Cinema (ANCINE)</strong>.
               Todos os projetos disponíveis em nossa plataforma passam por rigorosa análise de compliance antes de serem oferecidos aos investidores.
             </p>
             <div className="trust-badges">
@@ -424,27 +467,13 @@ export default function Home() {
           <div className="faq-list">
             <div className={`faq-item ${activeFaq === 0 ? 'active' : ''}`}>
               <button className="faq-question" onClick={() => setActiveFaq(activeFaq === 0 ? null : 0)}>
-                <span>Qual é o custo real do investimento em CAV?</span>
+                <span>O que é o Certificado de Investimento Audiovisual (CAV)?</span>
                 <span className="faq-icon">+</span>
               </button>
               <div className="faq-answer">
                 <div>
                   <p>
-                    <strong>O custo real pode ser ZERO ou até negativo.</strong> Veja como: ao investir R$ 100k em CAV, você primeiro deduz como despesa operacional, economizando ~R$ 34k em IRPJ e CSLL. Seu custo passa para R$ 66k. Depois, você abate 100% do valor (R$ 100k) do seu IR devido. Com esses dois benefícios combinados, o desembolso líquido pode chegar a zero. Adicionalmente, você ainda pode ter retorno financeiro com a participação nos lucros da obra audiovisual. É por isso que chamamos de "lucro escondido" — muitas empresas pagam impostos sem saber que poderiam reinvestir esse valor de forma inteligente.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className={`faq-item ${activeFaq === 1 ? 'active' : ''}`}>
-              <button className="faq-question" onClick={() => setActiveFaq(activeFaq === 1 ? null : 1)}>
-                <span>O que é CAV (Certificado de Investimento Audiovisual)?</span>
-                <span className="faq-icon">+</span>
-              </button>
-              <div className="faq-answer">
-                <div>
-                  <p>
-                    O CAV é um título emitido por empresas produtoras de obras audiovisuais brasileiras, que permite às empresas investidoras receber participação nos resultados comerciais da obra. O investimento em CAV pode ser deduzido do Imposto de Renda devido por empresas tributadas pelo Lucro Real, até o limite de 3% do imposto devido, conforme estabelecido pela Lei do Audiovisual (Lei nº 8.685/93).
+                    O CAV é um título emitido por produtoras de obras audiovisuais brasileiras, que permite às empresas investidoras adquirir quotas representativas de direitos de comercialização de obras e projetos específicos da área audiovisual cinematográfica brasileira de produção independente, bem como os de exibição, distribuição e infraestrutura técnica, apresentados por empresa brasileira de capital nacional. Essa modalidade de investimento foi instituída pela Lei nº 8.685/1993, art. 1º, que garante à empresa investidora a possibilidade de abatimento do valor investido como despesa operacional e a dedução integral do IRPJ até o limite de 3% do imposto devido.
                   </p>
                 </div>
               </div>
@@ -458,21 +487,38 @@ export default function Home() {
               <div className="faq-answer">
                 <div>
                   <p>
-                    Podem investir em CAV empresas tributadas pelo regime de Lucro Real que possuam Imposto de Renda devido. O investimento é limitado a 3% do imposto de renda devido, antes de qualquer incentivo fiscal. É uma excelente opção para empresas que buscam otimizar sua carga tributária enquanto apoiam a cultura brasileira.
+                    Qualquer empresa pode investir em CAV, mas somente as empresas tributadas pelo regime de Lucro Real têm direito aos benefícios fiscais. É uma excelente opção para quem busca otimizar sua carga tributária enquanto apoia a produção audiovisual brasileira.
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className={`faq-item ${activeFaq === 3 ? 'active' : ''}`}>
-              <button className="faq-question" onClick={() => setActiveFaq(activeFaq === 3 ? null : 3)}>
-                <span>Como funciona o abatimento fiscal?</span>
+            <div className={`faq-item ${activeFaq === 2 ? 'active' : ''}`}>
+              <button className="faq-question" onClick={() => setActiveFaq(activeFaq === 2 ? null : 2)}>
+                <span>Como funciona o benefício fiscal?</span>
                 <span className="faq-icon">+</span>
               </button>
               <div className="faq-answer">
                 <div>
                   <p>
-                    Ao investir em CAV, sua empresa pode deduzir 100% do valor investido diretamente do Imposto de Renda devido, respeitando o limite de 3% do IR antes de outros incentivos. Ou seja, o valor investido não representa um custo adicional para a empresa — é uma realocação do imposto que seria pago ao governo para o fomento do audiovisual brasileiro.
+                    As empresas tributadas pelo regime de lucro real podem deduzir a quantia investida do seu IRPJ até o limite de 3% do imposto de renda devido, antes do adicional, com base:
+                  </p>
+                  <p>
+                    a) no lucro real trimestral; ou<br />
+                    b) no lucro real apurado no ajuste anual.
+                  </p>
+                  <p>
+                    A dedução também se aplica ao imposto determinado com base no lucro estimado, calculado com base na receita bruta e acréscimos. Porém, o valor deduzido do imposto com base no lucro estimado:
+                  </p>
+                  <p>
+                    a) não será considerado imposto pago por estimativa; e<br />
+                    b) deve compor o valor a ser deduzido do imposto devido no ajuste anual.
+                  </p>
+                  <p>
+                    Eventuais excessos ao limite de 3% de dedução não poderão ser deduzidos do imposto devido em períodos de apuração posteriores.
+                  </p>
+                  <p>
+                    <strong>Além disso, a maior vantagem:</strong> sua empresa ainda pode abater o investimento em CAV como despesa operacional para fins de determinação do lucro real. Isso significa que você deixa de pagar IRPJ sobre o valor investido, reduzindo sua carga tributária e aumentando o lucro final da empresa.
                   </p>
                 </div>
               </div>
@@ -480,6 +526,52 @@ export default function Home() {
 
             <div className={`faq-item ${activeFaq === 3 ? 'active' : ''}`}>
               <button className="faq-question" onClick={() => setActiveFaq(activeFaq === 3 ? null : 3)}>
+                <span>Como calculo o valor a ser investido em CAV?</span>
+                <span className="faq-icon">+</span>
+              </button>
+              <div className="faq-answer">
+                <div>
+                  <p>
+                    A dedução é limitada a 3% do IRPJ devido antes do adicional, portanto o imposto considerado para o cálculo é de 15%.
+                  </p>
+                  <p>
+                    Então é só calcular o Lucro Líquido x 15% x 3%? Não! Lembre-se de que você também pode abater o valor investido para fins de determinação do Lucro Real. Logo, o cálculo deverá observar todas as vantagens fiscais:
+                  </p>
+                  <p>
+                    <strong>Valor Investido = (Lucro Líquido - Valor Investido) x 15% x 3%</strong>
+                  </p>
+                  <p>
+                    A partir da fórmula, você chegará ao seguinte resultado:
+                  </p>
+                  <p>
+                    <strong>Valor Investido = Lucro Líquido x 0,44798407%</strong>
+                  </p>
+                  <p>
+                    Dessa forma, você deverá utilizar o valor do Lucro Líquido antes do abatimento e multiplicá-lo pelo coeficiente acima para obter o valor máximo a ser investido pela empresa.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className={`faq-item ${activeFaq === 4 ? 'active' : ''}`}>
+              <button className="faq-question" onClick={() => setActiveFaq(activeFaq === 4 ? null : 4)}>
+                <span>Além do CAV, posso também incentivar a atividade audiovisual por meio de patrocínio com finalidade promocional?</span>
+                <span className="faq-icon">+</span>
+              </button>
+              <div className="faq-answer">
+                <div>
+                  <p>
+                    Sim. A Lei nº 8.685/1993 permite o incentivo a título de patrocínio em seu art. 1º-A, com dedução total do IRPJ, assim como para valores investidos em CAV. Mas há uma diferença importante: os patrocínios não permitem abatimento da despesa operacional, tendo em vista que a empresa já terá, nesse caso, o benefício decorrente do acordo promocional.
+                  </p>
+                  <p>
+                    <strong>Portanto, para maximizar suas vantagens, recomenda-se que a empresa utilize primeiramente os investimentos em CAV, no limite de 3% do IRPJ, e em seguida complemente os incentivos com patrocínio, até o limite de 1%.</strong> O total dessas deduções não poderá exceder a 4% do imposto devido.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className={`faq-item ${activeFaq === 5 ? 'active' : ''}`}>
+              <button className="faq-question" onClick={() => setActiveFaq(activeFaq === 5 ? null : 5)}>
                 <span>É possível ter retorno financeiro além do benefício fiscal?</span>
                 <span className="faq-icon">+</span>
               </button>
@@ -492,15 +584,15 @@ export default function Home() {
               </div>
             </div>
 
-            <div className={`faq-item ${activeFaq === 5 ? 'active' : ''}`}>
-              <button className="faq-question" onClick={() => setActiveFaq(activeFaq === 5 ? null : 5)}>
+            <div className={`faq-item ${activeFaq === 6 ? 'active' : ''}`}>
+              <button className="faq-question" onClick={() => setActiveFaq(activeFaq === 6 ? null : 6)}>
                 <span>Qual o papel da CineTax nesse processo?</span>
                 <span className="faq-icon">+</span>
               </button>
               <div className="faq-answer">
                 <div>
                   <p>
-                    A CineTax é uma plataforma tecnológica que conecta empresas investidoras a projetos audiovisuais aprovados pela Ancine. Nós simplificamos todo o processo: desde a seleção de projetos até a emissão dos certificados, passando pela análise de conformidade e acompanhamento do investimento. Nossa missão é tornar o investimento em cultura acessível, seguro e rentável.
+                    A CineTax é uma plataforma tecnológica que conecta empresas investidoras a projetos audiovisuais aprovados pela Ancine. Nós simplificamos todo o processo: desde a seleção de projetos até a emissão dos certificados, passando pela análise de conformidade e acompanhamento do investimento. Nossa missão é tornar o investimento no audiovisual acessível, seguro e rentável.
                   </p>
                 </div>
               </div>
@@ -513,7 +605,7 @@ export default function Home() {
       <section className="final-cta">
         <div className="container">
           <h2 className="final-cta-title">
-            Pronto para transformar seu IR em investimento cultural?
+            Pronto para transformar seu IRPJ em investimento no audiovisual?
           </h2>
           <p className="final-cta-text">
             Junte-se às empresas que já descobriram o poder do audiovisual como estratégia fiscal.

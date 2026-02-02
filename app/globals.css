@@ -212,6 +212,21 @@ h4 {
   transform: scale(1.02);
 }
 
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.navbar-slogan {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--navy-700);
+  font-style: italic;
+  border-left: 2px solid var(--gold-400);
+  padding-left: 16px;
+}
+
 .btn-cta {
   display: inline-flex;
   align-items: center;
@@ -324,6 +339,14 @@ h4 {
   }
 }
 
+.hero-cav-intro {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--gold-300);
+  margin-bottom: 16px;
+  font-style: italic;
+}
+
 .hero-title {
   font-size: clamp(2.5rem, 5vw, 3.75rem);
   font-weight: 800;
@@ -434,6 +457,37 @@ h4 {
   box-shadow: 0 0 0 3px rgba(212, 162, 26, 0.2);
 }
 
+.form-group textarea {
+  width: 100%;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+  color: var(--white);
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
+  min-height: 100px;
+  transition: var(--transition-fast);
+}
+
+.form-group textarea::placeholder {
+  color: var(--gray-500);
+}
+
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--gold-500);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 0 3px rgba(212, 162, 26, 0.2);
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
 .btn-submit {
   width: 100%;
   padding: 16px 32px;
@@ -466,6 +520,35 @@ h4 {
   margin-top: 12px;
 }
 
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px 24px;
+  background: #25D366;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: var(--transition-normal);
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.btn-whatsapp:hover {
+  background: #20BD5A;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
+}
+
+.btn-whatsapp svg {
+  flex-shrink: 0;
+}
+
 .form-success {
   text-align: center;
   font-size: 0.875rem;
@@ -480,6 +563,32 @@ h4 {
   color: #ef4444;
   margin-top: 12px;
   font-weight: 500;
+}
+
+/* ===== CAV INTRODUCTION SECTION ===== */
+.cav-intro {
+  padding: 60px 0;
+  background: linear-gradient(135deg, var(--gold-50) 0%, var(--white) 100%);
+  border-bottom: 1px solid var(--gold-200);
+}
+
+.cav-intro-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cav-intro-question {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  color: var(--navy-800);
+  margin-bottom: 20px;
+}
+
+.cav-intro-text {
+  font-size: 1.125rem;
+  color: var(--gray-700);
+  line-height: 1.8;
 }
 
 /* ===== VALUE PROPOSITION SECTION ===== */
@@ -628,6 +737,78 @@ h4 {
   color: var(--gold-600);
   font-weight: 500;
   margin-top: 16px;
+}
+
+/* ===== COMPETITOR ALERT SECTION ===== */
+.competitor-alert {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%);
+  border-top: 3px solid #FF6F00;
+  border-bottom: 3px solid #FF6F00;
+}
+
+.competitor-alert-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  background: white;
+  padding: 48px;
+  border-radius: var(--radius-2xl);
+  box-shadow: 0 20px 60px rgba(255, 111, 0, 0.15);
+}
+
+.alert-icon {
+  font-size: 4rem;
+  margin-bottom: 24px;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.alert-title {
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 800;
+  color: #E65100;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.alert-text {
+  font-size: 1.125rem;
+  color: var(--gray-700);
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+
+.btn-alert {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 32px;
+  background: linear-gradient(135deg, #FF6F00, #F57C00);
+  color: white;
+  font-weight: 700;
+  font-size: 1.125rem;
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  transition: var(--transition-normal);
+  box-shadow: 0 8px 30px rgba(255, 111, 0, 0.3);
+}
+
+.btn-alert:hover {
+  background: linear-gradient(135deg, #F57C00, #FB8C00);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(255, 111, 0, 0.4);
 }
 
 .value-result {
@@ -791,6 +972,11 @@ h4 {
   font-size: 0.95rem;
   color: var(--gray-600);
   line-height: 1.6;
+}
+
+.benefits-cta {
+  text-align: center;
+  margin-top: 48px;
 }
 
 /* ===== HOW IT WORKS SECTION ===== */
@@ -1216,6 +1402,30 @@ h4 {
     justify-content: center;
   }
 
+  /* Value Proposition responsivo */
+  .value-breakdown {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .value-card {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .value-result {
+    padding: 32px 24px;
+  }
+
+  .result-value {
+    font-size: 2.5rem;
+  }
+
+  .result-highlight {
+    flex-direction: column;
+    text-align: center;
+  }
+
   .benefits-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1262,6 +1472,35 @@ h4 {
   .footer-content {
     grid-template-columns: 1fr 1fr;
   }
+
+  /* Final CTA responsivo */
+  .final-cta-title {
+    font-size: 2rem;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .btn-whatsapp {
+    width: 100%;
+  }
+
+  .competitor-alert-content {
+    padding: 32px 24px;
+  }
+
+  .alert-icon {
+    font-size: 3rem;
+  }
+
+  .alert-title {
+    font-size: 1.5rem;
+  }
+
+  .alert-text {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1280,6 +1519,10 @@ h4 {
   .btn-cta {
     padding: 10px 16px;
     font-size: 0.875rem;
+  }
+
+  .navbar-slogan {
+    display: none;
   }
 
   .hero {
@@ -1307,6 +1550,64 @@ h4 {
 
   .trust-badges {
     gap: 32px;
+  }
+
+  /* Value section 768px */
+  .example-header h3 {
+    font-size: 1.5rem;
+  }
+
+  .value-card {
+    padding: 24px 20px;
+    max-width: none;
+  }
+
+  .value-result {
+    padding: 24px 20px;
+  }
+
+  .result-value {
+    font-size: 2rem;
+  }
+
+  .result-desc {
+    font-size: 1rem;
+  }
+
+  .result-highlight {
+    padding: 20px;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  /* Final CTA 768px */
+  .final-cta-title {
+    font-size: 1.75rem;
+  }
+
+  .final-cta-text {
+    font-size: 1rem;
+  }
+
+  .btn-final-cta {
+    padding: 16px 32px;
+    font-size: 1rem;
+  }
+
+  /* Timeline 768px */
+  .timeline::before {
+    left: 40px;
+  }
+
+  .step-number {
+    width: 60px;
+    height: 60px;
+  }
+
+  .step-number span {
+    font-size: 1.5rem;
   }
 
   .faq-question {
@@ -1356,7 +1657,16 @@ h4 {
   }
 
   .hero-title {
-    font-size: 2rem;
+    font-size: 1.75rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .stat-item {
+    flex: 1 1 100%;
+    text-align: center;
   }
 
   .stat-value {
@@ -1375,5 +1685,141 @@ h4 {
     width: 60px;
     height: 60px;
     font-size: 1.5rem;
+  }
+
+  /* Value section 480px */
+  .example-header h3 {
+    font-size: 1.25rem;
+  }
+
+  .value-card {
+    padding: 20px 16px;
+  }
+
+  .value-card-number {
+    width: 40px;
+    height: 40px;
+    font-size: 1.25rem;
+  }
+
+  .value-card-title {
+    font-size: 1.125rem;
+  }
+
+  .calc-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .calc-total {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .value-result {
+    padding: 20px 16px;
+  }
+
+  .result-value {
+    font-size: 1.75rem;
+  }
+
+  .result-desc {
+    font-size: 0.9rem;
+  }
+
+  .result-highlight {
+    padding: 16px;
+  }
+
+  .highlight-icon {
+    font-size: 1.5rem;
+  }
+
+  /* Section headers 480px */
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .section-desc {
+    font-size: 0.95rem;
+  }
+
+  /* Final CTA 480px */
+  .final-cta-title {
+    font-size: 1.5rem;
+  }
+
+  .final-cta-text {
+    font-size: 0.9rem;
+  }
+
+  .btn-final-cta {
+    padding: 14px 28px;
+    font-size: 0.95rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Trust section 480px */
+  .trust-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+  }
+
+  .trust-title {
+    font-size: 1.5rem;
+  }
+
+  .trust-text {
+    font-size: 1rem;
+  }
+
+  .trust-badges {
+    gap: 24px;
+    flex-direction: column;
+  }
+
+  /* Timeline 480px */
+  .timeline::before {
+    left: 30px;
+  }
+
+  .step-number {
+    width: 50px;
+    height: 50px;
+  }
+
+  .step-number span {
+    font-size: 1.25rem;
+  }
+
+  .step-title {
+    font-size: 1.1rem;
+  }
+
+  .step-desc {
+    font-size: 0.9rem;
+  }
+
+  /* FAQ 480px */
+  .faq-question {
+    padding: 16px 20px;
+    font-size: 0.95rem;
+  }
+
+  .faq-answer {
+    padding: 0 20px;
+  }
+
+  .faq-item.active .faq-answer {
+    padding: 0 20px 16px;
+  }
+
+  .faq-answer p {
+    font-size: 0.9rem;
   }
 }
