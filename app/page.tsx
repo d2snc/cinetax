@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
+import { Analytics } from "@vercel/analytics/next";
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -686,6 +687,7 @@ export default function Home() {
           </div>
         </div>
       </footer>
+      <Analytics />
     </>
   );
 }
